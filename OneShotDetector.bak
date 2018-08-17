@@ -1,0 +1,643 @@
+EESchema Schematic File Version 4
+LIBS:OneShotDetector-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:R R5
+U 1 1 5AAD7DDE
+P 2850 3100
+F 0 "R5" H 2918 3146 50  0000 L CNN
+F 1 "300k" H 2918 3055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 2850 3100 50  0001 C CNN
+F 3 "" H 2850 3100 50  0001 C CNN
+	1    2850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R4
+U 1 1 5AAD7E7E
+P 1950 3100
+F 0 "R4" H 2018 3146 50  0000 L CNN
+F 1 "1000k" H 2018 3055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 1950 3100 50  0001 C CNN
+F 3 "" H 1950 3100 50  0001 C CNN
+	1    1950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R3
+U 1 1 5AAD7EB0
+P 3450 2750
+F 0 "R3" V 3245 2750 50  0000 C CNN
+F 1 "10k" V 3336 2750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 3450 2750 50  0001 C CNN
+F 3 "" H 3450 2750 50  0001 C CNN
+	1    3450 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:CAP C3
+U 1 1 5AAD81E3
+P 2400 2750
+F 0 "C3" V 2085 2750 50  0000 C CNN
+F 1 "1000pf" V 2176 2750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 2400 2750 50  0001 C CNN
+F 3 "" H 2400 2750 50  0001 C CNN
+F 4 "C" H 2400 2750 50  0001 C CNN "Spice_Primitive"
+F 5 "1000p" H 2400 2750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2400 2750 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "100V" V 2400 2750 50  0001 C CNN "Voltage"
+	1    2400 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 2750 2850 2750
+Wire Wire Line
+	1950 2850 1950 2750
+Connection ~ 1950 2750
+Wire Wire Line
+	1950 2750 2150 2750
+Wire Wire Line
+	1950 3350 1950 3525
+Wire Wire Line
+	1950 3525 2225 3525
+Wire Wire Line
+	2850 3525 2850 3350
+Wire Wire Line
+	2850 2850 2850 2750
+Connection ~ 2850 2750
+Wire Wire Line
+	2850 2750 3200 2750
+Connection ~ 2850 3525
+$Comp
+L pspice:R R2
+U 1 1 5AAD8EA3
+P 5400 1675
+F 0 "R2" H 5468 1721 50  0000 L CNN
+F 1 "1000k" H 5468 1630 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 5400 1675 50  0001 C CNN
+F 3 "" H 5400 1675 50  0001 C CNN
+	1    5400 1675
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:CAP C2
+U 1 1 5AAD8F44
+P 5400 2575
+F 0 "C2" H 5222 2529 50  0000 R CNN
+F 1 "1uf" H 5222 2620 50  0000 R CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 5400 2575 50  0001 C CNN
+F 3 "" H 5400 2575 50  0001 C CNN
+F 4 "C" H 5400 2575 50  0001 C CNN "Spice_Primitive"
+F 5 "1000p" H 5400 2575 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5400 2575 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5400 2575
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 2825 5400 3525
+Wire Wire Line
+	5400 1425 5400 1300
+$Comp
+L power:GNDREF #PWR04
+U 1 1 5AAD8975
+P 2225 3650
+F 0 "#PWR04" H 2225 3400 50  0001 C CNN
+F 1 "GNDREF" H 2230 3477 50  0000 C CNN
+F 2 "" H 2225 3650 50  0001 C CNN
+F 3 "" H 2225 3650 50  0001 C CNN
+	1    2225 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2225 3650 2225 3525
+Connection ~ 2225 3525
+Wire Wire Line
+	2225 3525 2525 3525
+Wire Wire Line
+	2850 3525 3875 3525
+Wire Wire Line
+	3700 2750 3875 2750
+Wire Wire Line
+	3875 3300 3875 3525
+Connection ~ 3875 3525
+Wire Wire Line
+	3875 3100 3875 2750
+Connection ~ 3875 2750
+$Comp
+L power:GNDREF #PWR03
+U 1 1 5AADC064
+P 7775 2925
+F 0 "#PWR03" H 7775 2675 50  0001 C CNN
+F 1 "GNDREF" H 7780 2752 50  0000 C CNN
+F 2 "" H 7775 2925 50  0001 C CNN
+F 3 "" H 7775 2925 50  0001 C CNN
+	1    7775 2925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR06
+U 1 1 5AADD5F8
+P 1650 5300
+F 0 "#PWR06" H 1650 5050 50  0001 C CNN
+F 1 "GNDREF" H 1655 5127 50  0000 C CNN
+F 2 "" H 1650 5300 50  0001 C CNN
+F 3 "" H 1650 5300 50  0001 C CNN
+	1    1650 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5300 1650 5175
+Wire Wire Line
+	1650 4825 1200 4825
+Wire Wire Line
+	7775 2675 7775 2750
+$Comp
+L pspice:CAP C1
+U 1 1 5AADFA97
+P 8225 1300
+F 0 "C1" V 8125 1200 50  0000 R CNN
+F 1 "1uf" V 8350 1200 50  0000 R CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 8225 1300 50  0001 C CNN
+F 3 "" H 8225 1300 50  0001 C CNN
+F 4 "C" H 8225 1300 50  0001 C CNN "Spice_Primitive"
+F 5 "1000p" H 8225 1300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8225 1300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8225 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GNDREF #PWR01
+U 1 1 5AAE044E
+P 8600 1425
+F 0 "#PWR01" H 8600 1175 50  0001 C CNN
+F 1 "GNDREF" H 8605 1252 50  0000 C CNN
+F 2 "" H 8600 1425 50  0001 C CNN
+F 3 "" H 8600 1425 50  0001 C CNN
+	1    8600 1425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8475 1300 8600 1300
+Wire Wire Line
+	8600 1300 8600 1425
+$Comp
+L power:GNDREF #PWR02
+U 1 1 5AAE0EA3
+P 10700 2300
+F 0 "#PWR02" H 10700 2050 50  0001 C CNN
+F 1 "GNDREF" H 10705 2127 50  0000 C CNN
+F 2 "" H 10700 2300 50  0001 C CNN
+F 3 "" H 10700 2300 50  0001 C CNN
+	1    10700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ab2_header:AB2_HDR03-1 HDR1
+U 1 1 5AAE10B1
+P 10975 1900
+F 0 "HDR1" H 10825 1575 60  0000 L CNN
+F 1 "AB2_HDR03-1" H 10400 2075 60  0000 L CNN
+F 2 "DWL_KiCad_Lib:39-30-1039" H 10975 1900 60  0001 C CNN
+F 3 "" H 10975 1900 60  0000 C CNN
+	1    10975 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5AAE62FC
+P 3500 4475
+F 0 "#FLG03" H 3500 4550 50  0001 C CNN
+F 1 "PWR_FLAG" H 3500 4649 50  0000 C CNN
+F 2 "" H 3500 4475 50  0001 C CNN
+F 3 "" H 3500 4475 50  0001 C CNN
+	1    3500 4475
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5AAE6D62
+P 2525 3500
+F 0 "#FLG02" H 2525 3575 50  0001 C CNN
+F 1 "PWR_FLAG" H 2525 3674 50  0000 C CNN
+F 2 "" H 2525 3500 50  0001 C CNN
+F 3 "" H 2525 3500 50  0001 C CNN
+	1    2525 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L DWL_Devices:ZXMS6004DN8 U2
+U 1 1 5AAEA6EB
+P 4600 2800
+F 0 "U2" H 4600 3228 50  0000 C CNN
+F 1 "ZXMS6004DN8" H 4600 3137 50  0000 C CNN
+F 2 "Housings_SOIC:SO-8_5.3x6.2mm_Pitch1.27mm" H 4600 2800 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZXMS6004DN8.pdf" H 4600 2800 50  0001 C CNN
+	1    4600 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1925 5400 2125
+Wire Wire Line
+	3875 3525 5000 3525
+Wire Wire Line
+	4850 2650 5000 2650
+Wire Wire Line
+	5000 2650 5000 2550
+Wire Wire Line
+	5000 2125 5400 2125
+Connection ~ 5400 2125
+Wire Wire Line
+	4850 2550 5000 2550
+Connection ~ 5000 2550
+Wire Wire Line
+	5000 2550 5000 2125
+Wire Wire Line
+	4850 2950 5000 2950
+Wire Wire Line
+	5000 2950 5000 3525
+Connection ~ 5000 3525
+Wire Wire Line
+	5000 3525 5400 3525
+Wire Wire Line
+	7550 1300 7550 925 
+Connection ~ 7550 1300
+Wire Wire Line
+	1750 2750 1950 2750
+Text GLabel 1750 2750 0    50   Input ~ 0
++15V
+Text GLabel 7325 925  0    50   Input ~ 0
++15V
+Connection ~ 7550 925 
+Wire Wire Line
+	2525 3500 2525 3525
+Connection ~ 2525 3525
+Wire Wire Line
+	2525 3525 2850 3525
+$Comp
+L DWL_Devices:NCP781 U3
+U 1 1 5B455968
+P 2850 4725
+F 0 "U3" H 2850 5100 50  0000 C CNN
+F 1 "NCP781BMN150TAG" H 2850 5009 50  0000 C CNN
+F 2 "DWL_KiCad_Lib:DFN-6-1EP_3x3mm_Pitch0.65mm" H 2850 4725 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/308/NCP781-D-1273746.pdf" H 2850 4725 50  0001 C CNN
+	1    2850 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR05
+U 1 1 5B457A4D
+P 3250 5175
+F 0 "#PWR05" H 3250 4925 50  0001 C CNN
+F 1 "GNDREF" H 3255 5002 50  0000 C CNN
+F 2 "" H 3250 5175 50  0001 C CNN
+F 3 "" H 3250 5175 50  0001 C CNN
+	1    3250 5175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5025 2850 5100
+Wire Wire Line
+	2850 5100 3250 5100
+Wire Wire Line
+	3250 5100 3250 5175
+Wire Wire Line
+	3150 4875 3250 4875
+Wire Wire Line
+	3250 4875 3250 5100
+Connection ~ 3250 5100
+$Comp
+L pspice:CAP C4
+U 1 1 5B45C015
+P 2000 4875
+F 0 "C4" H 1775 4875 50  0000 C CNN
+F 1 "1000pf" H 1825 4725 50  0000 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 2000 4875 50  0001 C CNN
+F 3 "" H 2000 4875 50  0001 C CNN
+F 4 "C" H 2000 4875 50  0001 C CNN "Spice_Primitive"
+F 5 "1000p" H 2000 4875 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2000 4875 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "100V" V 2000 4875 50  0001 C CNN "Voltage"
+	1    2000 4875
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 4625 2000 4575
+Wire Wire Line
+	2000 4575 2350 4575
+Wire Wire Line
+	2000 5125 2000 5175
+Wire Wire Line
+	2000 5175 1650 5175
+Connection ~ 1650 5175
+Wire Wire Line
+	1650 5175 1650 4825
+Wire Wire Line
+	2550 4875 2475 4875
+Wire Wire Line
+	2475 4875 2475 4575
+Connection ~ 2475 4575
+Wire Wire Line
+	2475 4575 2550 4575
+Wire Wire Line
+	3150 4725 3300 4725
+Wire Wire Line
+	3300 4725 3300 4575
+Wire Wire Line
+	3300 4575 3150 4575
+$Comp
+L DWL_Devices:TLV6703 U1
+U 1 1 5B487874
+P 7775 2250
+F 0 "U1" H 7800 2450 50  0000 L CNN
+F 1 "TLV6703DDCT" H 7900 2375 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 7775 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv6703.pdf" H 7775 2250 50  0001 C CNN
+	1    7775 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1300 7675 1300
+Wire Wire Line
+	7675 1950 7675 1300
+Connection ~ 7675 1300
+Wire Wire Line
+	7675 1300 7975 1300
+Wire Wire Line
+	7675 2550 7675 2675
+Wire Wire Line
+	7675 2675 7775 2675
+Wire Wire Line
+	7775 2500 7775 2675
+Connection ~ 7775 2675
+Wire Wire Line
+	7875 2450 7875 2750
+Wire Wire Line
+	7875 2750 7775 2750
+Connection ~ 7775 2750
+Wire Wire Line
+	7775 2750 7775 2825
+$Comp
+L dk_Trimmer-Potentiometers:TC33X-2-103E POT1
+U 1 1 5B49FD11
+P 6475 2825
+F 0 "POT1" H 6425 2700 60  0000 R CNN
+F 1 "TC33X-2-103E" H 6575 2600 60  0000 R CNN
+F 2 "digikey-footprints:Trimpot_3.8mmx3.6mm_TC33X-2-103E" H 6675 3025 60  0001 L CNN
+F 3 "http://www.bourns.com/docs/Product-Datasheets/TC33.pdf" H 6675 3125 60  0001 L CNN
+F 4 "TC33X-103ETR-ND" H 6675 3225 60  0001 L CNN "Digi-Key_PN"
+F 5 "TC33X-2-103E" H 6675 3325 60  0001 L CNN "MPN"
+F 6 "Potentiometers, Variable Resistors" H 6675 3425 60  0001 L CNN "Category"
+F 7 "Trimmer Potentiometers" H 6675 3525 60  0001 L CNN "Family"
+F 8 "http://www.bourns.com/docs/Product-Datasheets/TC33.pdf" H 6675 3625 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/bourns-inc/TC33X-2-103E/TC33X-103ETR-ND/612858" H 6675 3725 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRIMMER 10K OHM 0.1W SMD" H 6675 3825 60  0001 L CNN "Description"
+F 11 "Bourns Inc." H 6675 3925 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6675 4025 60  0001 L CNN "Status"
+	1    6475 2825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2125 5400 2250
+$Comp
+L Transistor2:IRF9540N Q1
+U 1 1 5B59E790
+P 9450 1600
+F 0 "Q1" H 9656 1554 50  0000 L CNN
+F 1 "SQ2361ES" H 9656 1645 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9700 1525 50  0001 L CIN
+F 3 "https://www.mouser.com/datasheet/2/427/sq2361es-1018990.pdf" H 9450 1600 50  0001 L CNN
+	1    9450 1600
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6475 2525 6475 2250
+Wire Wire Line
+	6475 2250 5400 2250
+Connection ~ 5400 2250
+Connection ~ 7775 2825
+Wire Wire Line
+	7775 2825 7775 2925
+Wire Wire Line
+	8175 2250 9050 2250
+Wire Wire Line
+	9050 2250 9050 1600
+Wire Wire Line
+	9050 1600 9250 1600
+Wire Wire Line
+	9550 1400 9550 925 
+Wire Wire Line
+	7550 925  9050 925 
+Wire Wire Line
+	9550 1800 9550 1900
+Wire Wire Line
+	9550 1900 9700 1900
+Wire Wire Line
+	10975 2000 10700 2000
+Wire Wire Line
+	10700 2000 10700 2300
+$Comp
+L device:D_Schottky D3
+U 1 1 5B5DAA89
+P 1700 4575
+F 0 "D3" H 1700 4359 50  0000 C CNN
+F 1 "D_Schottky" H 1700 4450 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMA_Handsoldering" H 1700 4575 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 1700 4575 50  0001 C CNN
+F 4 "STPS3170" H 1700 4575 50  0001 C CNN "PartNumber"
+	1    1700 4575
+	-1   0    0    1   
+$EndComp
+$Comp
+L ab2_header:AB2_HDR02-1 HDR2
+U 1 1 5AADC6D3
+P 1200 4725
+F 0 "HDR2" H 1100 4875 60  0000 L CNN
+F 1 "AB2_HDR02-1" H 950 4525 60  0000 L CNN
+F 2 "DWL_KiCad_Lib:39-29-9023" H 1200 4725 60  0001 C CNN
+F 3 "" H 1200 4725 60  0000 C CNN
+	1    1200 4725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4575 1850 4575
+Connection ~ 2000 4575
+Wire Wire Line
+	1550 4575 1475 4575
+Wire Wire Line
+	1475 4575 1475 4725
+Wire Wire Line
+	1475 4725 1200 4725
+$Comp
+L ab2_header:AB2_HDR02-1 HDR3
+U 1 1 5B5E0690
+P 1175 5900
+F 0 "HDR3" H 1075 6050 60  0000 L CNN
+F 1 "AB2_HDR02-1" H 850 5700 60  0000 L CNN
+F 2 "DWL_KiCad_Lib:39-29-9023" H 1175 5900 60  0001 C CNN
+F 3 "" H 1175 5900 60  0000 C CNN
+	1    1175 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 5900 1525 5900
+$Comp
+L power:GNDREF #PWR07
+U 1 1 5B5E2860
+P 1600 6225
+F 0 "#PWR07" H 1600 5975 50  0001 C CNN
+F 1 "GNDREF" H 1605 6052 50  0000 C CNN
+F 2 "" H 1600 6225 50  0001 C CNN
+F 3 "" H 1600 6225 50  0001 C CNN
+	1    1600 6225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1175 6000 1600 6000
+Wire Wire Line
+	1600 6000 1600 6225
+Wire Wire Line
+	1825 5900 2350 5900
+Wire Wire Line
+	2350 5900 2350 4575
+Connection ~ 2350 4575
+Wire Wire Line
+	2350 4575 2475 4575
+Wire Wire Line
+	10000 1900 10075 1900
+Wire Wire Line
+	10200 2100 10075 2100
+Wire Wire Line
+	10075 2100 10075 1900
+Connection ~ 10075 1900
+Wire Wire Line
+	10075 1900 10975 1900
+Connection ~ 6475 2250
+NoConn ~ 6275 2825
+Text GLabel 3725 4575 2    50   Input ~ 0
++15V
+Wire Wire Line
+	3300 4575 3500 4575
+Connection ~ 3300 4575
+Wire Wire Line
+	5400 1300 7550 1300
+Wire Wire Line
+	3500 4475 3500 4575
+Connection ~ 3500 4575
+Wire Wire Line
+	3500 4575 3725 4575
+$Comp
+L device:D_Schottky D4
+U 1 1 5B636DB3
+P 1675 5900
+F 0 "D4" H 1675 5684 50  0000 C CNN
+F 1 "D_Schottky" H 1675 5775 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMA_Handsoldering" H 1675 5900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 1675 5900 50  0001 C CNN
+F 4 "STPS3170" H 1675 5900 50  0001 C CNN "PartNumber"
+	1    1675 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:D_Schottky D1
+U 1 1 5B636EEA
+P 9850 1900
+F 0 "D1" H 9750 1850 50  0000 C CNN
+F 1 "D_Schottky" H 9850 2000 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMA_Handsoldering" H 9850 1900 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 9850 1900 50  0001 C CNN
+F 4 "STPS3170" H 9850 1900 50  0001 C CNN "PartNumber"
+	1    9850 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:D_Schottky D2
+U 1 1 5B637082
+P 10350 2100
+F 0 "D2" H 10325 2200 50  0000 C CNN
+F 1 "D_Schottky" H 10350 2000 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMA_Handsoldering" H 10350 2100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 10350 2100 50  0001 C CNN
+F 4 "STPS3170" H 10350 2100 50  0001 C CNN "PartNumber"
+	1    10350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 2100 10975 2100
+Wire Wire Line
+	7325 925  7550 925 
+Wire Wire Line
+	6675 2825 6950 2825
+Wire Wire Line
+	5400 2250 5400 2325
+Wire Wire Line
+	6475 2250 6950 2250
+$Comp
+L pspice:R R1
+U 1 1 5B66ED29
+P 9050 1250
+F 0 "R1" H 8950 1325 50  0000 C CNN
+F 1 "30k" H 8936 1250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 9050 1250 50  0001 C CNN
+F 3 "" H 9050 1250 50  0001 C CNN
+	1    9050 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9050 1500 9050 1600
+Connection ~ 9050 1600
+Wire Wire Line
+	9050 1000 9050 925 
+Connection ~ 9050 925 
+Wire Wire Line
+	9050 925  9550 925 
+$Comp
+L device:D_Zener_Small D5
+U 1 1 5B67F15C
+P 3875 3200
+F 0 "D5" V 3829 3268 50  0000 L CNN
+F 1 "D_Zener_Small" V 3920 3268 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" V 3875 3200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/yfzvfhtr5.1b-e-1266043.pdf" V 3875 3200 50  0001 C CNN
+F 4 "YFZVFHTR5.1B" V 3875 3200 50  0001 C CNN "PartNumber"
+	1    3875 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L device:D_Zener_Small D6
+U 1 1 5B68713A
+P 6950 2550
+F 0 "D6" V 6904 2618 50  0000 L CNN
+F 1 "D_Zener_Small" V 6995 2618 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" V 6950 2550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/yfzvfhtr5.1b-e-1266043.pdf" V 6950 2550 50  0001 C CNN
+F 4 "YFZVFHTR5.1B" V 6950 2550 50  0001 C CNN "PartNumber"
+	1    6950 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 2650 6950 2825
+Connection ~ 6950 2825
+Wire Wire Line
+	6950 2825 7775 2825
+Wire Wire Line
+	6950 2450 6950 2250
+Connection ~ 6950 2250
+Wire Wire Line
+	6950 2250 7475 2250
+Wire Wire Line
+	3875 2750 4350 2750
+$EndSCHEMATC
