@@ -1,25 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# DWL_Devices_NCP781
-#
-DEF DWL_Devices_NCP781 U 0 1 Y Y 1 F N
-F0 "U" -150 -300 50 H V C CNN
-F1 "DWL_Devices_NCP781" 0 350 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -200 200 200 -200 0 1 0 f
-X IN 1 -300 150 100 R 50 50 1 1 W
-X EN 2 -300 -150 100 R 50 50 1 1 I
-X nc 3 -300 50 100 R 50 50 1 1 N N
-X GND 4 0 -300 100 U 50 50 1 1 W
-X OUT 5 300 150 100 L 50 50 1 1 w
-X ADJ/SEN 6 300 0 100 L 50 50 1 1 I
-X EP EP 300 -150 100 L 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
 # DWL_Devices_TLV6703
 #
 DEF DWL_Devices_TLV6703 U 0 40 Y Y 1 F N
@@ -75,21 +56,40 @@ X D2 6 250 250 100 L 50 50 2 1 B
 ENDDRAW
 ENDDEF
 #
-# Transistor2_IRF9540N
+# Device_D_Schottky
 #
-DEF Transistor2_IRF9540N Q 0 0 Y Y 1 F N
-F0 "Q" 250 75 50 H V L CNN
-F1 "Transistor2_IRF9540N" 250 0 50 H V L CNN
-F2 "TO_SOT_Packages_THT:TO-220-3_Vertical" 250 -75 50 H I L CIN
-F3 "" 0 0 50 H I L CNN
-ALIAS IRF4905
+DEF Device_D_Schottky D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_D_Schottky" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- TO?220*
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
 $ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Q_PMOS_GSD
+#
+DEF Device_Q_PMOS_GSD Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "Device_Q_PMOS_GSD" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
 C 65 0 111 0 1 10 N
 C 100 -70 11 0 1 0 F
 C 100 70 11 0 1 0 F
+P 2 0 1 0 2 0 10 0 N
 P 2 0 1 0 30 -70 100 -70 N
 P 2 0 1 10 30 -50 30 -90 N
 P 2 0 1 0 30 0 100 0 N
@@ -104,9 +104,51 @@ P 4 0 1 0 90 0 50 -15 50 15 90 0 F
 P 4 0 1 0 100 -70 130 -70 130 70 100 70 N
 P 4 0 1 0 110 -20 115 -15 145 -15 150 -10 N
 P 4 0 1 0 130 -15 115 10 145 10 130 -15 N
-X G 1 -200 0 210 R 50 50 1 1 I
+X G 1 -200 0 200 R 50 50 1 1 I
 X S 2 100 -200 100 U 50 50 1 1 P
 X D 3 100 200 100 D 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# OneShotDetector-rescue_D_Zener_Small-device
+#
+DEF OneShotDetector-rescue_D_Zener_Small-device D 0 10 N N 1 F N
+F0 "D" 0 90 50 H V C CNN
+F1 "OneShotDetector-rescue_D_Zener_Small-device" 0 -90 50 H V C CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 30 0 -30 0 N
+P 3 0 1 0 -10 40 -30 40 -30 -40 N
+P 4 0 1 0 30 40 -30 0 30 -40 30 40 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# OneShotDetector-rescue_NCP781-DWL_Devices
+#
+DEF OneShotDetector-rescue_NCP781-DWL_Devices U 0 1 Y Y 1 F N
+F0 "U" -150 -300 50 H V C CNN
+F1 "OneShotDetector-rescue_NCP781-DWL_Devices" 0 350 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -200 200 200 -200 0 1 0 f
+X IN 1 -300 150 100 R 50 50 1 1 W
+X EN 2 -300 -150 100 R 50 50 1 1 I
+X nc 3 -300 50 100 R 50 50 1 1 N N
+X GND 4 0 -300 100 U 50 50 1 1 W
+X OUT 5 300 150 100 L 50 50 1 1 w
+X ADJ/SEN 6 300 0 100 L 50 50 1 1 I
+X EP EP 300 -150 100 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
@@ -136,52 +178,6 @@ S -50 100 50 -250 0 1 0 N
 X ~ 1 0 0 0 R 50 50 1 1 P
 X ~ 2 0 -100 0 R 50 50 1 1 P
 X ~ 3 0 -200 0 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# device_D_Schottky
-#
-DEF device_D_Schottky D 0 40 N N 1 F N
-F0 "D" 0 100 50 H V C CNN
-F1 "device_D_Schottky" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- TO-???*
- *SingleDiode
- *_Diode_*
- *SingleDiode*
- D_*
-$ENDFPLIST
-DRAW
-P 2 0 1 0 50 0 -50 0 N
-P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
-P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
-X K 1 -150 0 100 R 50 50 1 1 P
-X A 2 150 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# device_D_Zener_Small
-#
-DEF device_D_Zener_Small D 0 10 N N 1 F N
-F0 "D" 0 90 50 H V C CNN
-F1 "device_D_Zener_Small" 0 -90 50 H V C CNN
-F2 "" 0 0 50 V I C CNN
-F3 "" 0 0 50 V I C CNN
-$FPLIST
- TO-???*
- *SingleDiode
- *_Diode_*
- *SingleDiode*
- D_*
-$ENDFPLIST
-DRAW
-P 2 0 1 0 30 0 -30 0 N
-P 3 0 1 0 -10 40 -30 40 -30 -40 N
-P 4 0 1 0 30 40 -30 0 30 -40 30 40 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

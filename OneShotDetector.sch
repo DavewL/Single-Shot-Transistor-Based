@@ -287,7 +287,7 @@ Connection ~ 2525 3525
 Wire Wire Line
 	2525 3525 2850 3525
 $Comp
-L DWL_Devices:NCP781 U3
+L OneShotDetector-rescue:NCP781-DWL_Devices U3
 U 1 1 5B455968
 P 2850 4725
 F 0 "U3" H 2850 5100 50  0000 C CNN
@@ -412,17 +412,6 @@ F 12 "Active" H 6675 4025 60  0001 L CNN "Status"
 $EndComp
 Wire Wire Line
 	5400 2125 5400 2250
-$Comp
-L Transistor2:IRF9540N Q1
-U 1 1 5B59E790
-P 9450 1600
-F 0 "Q1" H 9656 1554 50  0000 L CNN
-F 1 "SQ2361ES" H 9656 1645 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 9700 1525 50  0001 L CIN
-F 3 "https://www.mouser.com/datasheet/2/427/sq2361es-1018990.pdf" H 9450 1600 50  0001 L CNN
-	1    9450 1600
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	6475 2525 6475 2250
 Wire Wire Line
@@ -449,18 +438,6 @@ Wire Wire Line
 	10975 2000 10700 2000
 Wire Wire Line
 	10700 2000 10700 2300
-$Comp
-L device:D_Schottky D3
-U 1 1 5B5DAA89
-P 1700 4575
-F 0 "D3" H 1700 4359 50  0000 C CNN
-F 1 "D_Schottky" H 1700 4450 50  0000 C CNN
-F 2 "Diodes_SMD:D_SMA_Handsoldering" H 1700 4575 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 1700 4575 50  0001 C CNN
-F 4 "STPS3170" H 1700 4575 50  0001 C CNN "PartNumber"
-	1    1700 4575
-	-1   0    0    1   
-$EndComp
 $Comp
 L ab2_header:AB2_HDR02-1 HDR2
 U 1 1 5AADC6D3
@@ -539,42 +516,6 @@ Wire Wire Line
 Connection ~ 3500 4575
 Wire Wire Line
 	3500 4575 3725 4575
-$Comp
-L device:D_Schottky D4
-U 1 1 5B636DB3
-P 1675 5900
-F 0 "D4" H 1675 5684 50  0000 C CNN
-F 1 "D_Schottky" H 1675 5775 50  0000 C CNN
-F 2 "Diodes_SMD:D_SMA_Handsoldering" H 1675 5900 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 1675 5900 50  0001 C CNN
-F 4 "STPS3170" H 1675 5900 50  0001 C CNN "PartNumber"
-	1    1675 5900
-	-1   0    0    1   
-$EndComp
-$Comp
-L device:D_Schottky D1
-U 1 1 5B636EEA
-P 9850 1900
-F 0 "D1" H 9750 1850 50  0000 C CNN
-F 1 "D_Schottky" H 9850 2000 50  0000 C CNN
-F 2 "Diodes_SMD:D_SMA_Handsoldering" H 9850 1900 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 9850 1900 50  0001 C CNN
-F 4 "STPS3170" H 9850 1900 50  0001 C CNN "PartNumber"
-	1    9850 1900
-	-1   0    0    1   
-$EndComp
-$Comp
-L device:D_Schottky D2
-U 1 1 5B637082
-P 10350 2100
-F 0 "D2" H 10325 2200 50  0000 C CNN
-F 1 "D_Schottky" H 10350 2000 50  0000 C CNN
-F 2 "Diodes_SMD:D_SMA_Handsoldering" H 10350 2100 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/389/stps3170-956643.pdf" H 10350 2100 50  0001 C CNN
-F 4 "STPS3170" H 10350 2100 50  0001 C CNN "PartNumber"
-	1    10350 2100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10500 2100 10975 2100
 Wire Wire Line
@@ -605,7 +546,7 @@ Connection ~ 9050 925
 Wire Wire Line
 	9050 925  9550 925 
 $Comp
-L device:D_Zener_Small D5
+L OneShotDetector-rescue:D_Zener_Small-device D5
 U 1 1 5B67F15C
 P 3875 3200
 F 0 "D5" V 3829 3268 50  0000 L CNN
@@ -617,7 +558,7 @@ F 4 "YFZVFHTR5.1B" V 3875 3200 50  0001 C CNN "PartNumber"
 	0    1    1    0   
 $EndComp
 $Comp
-L device:D_Zener_Small D6
+L OneShotDetector-rescue:D_Zener_Small-device D6
 U 1 1 5B68713A
 P 6950 2550
 F 0 "D6" V 6904 2618 50  0000 L CNN
@@ -640,4 +581,59 @@ Wire Wire Line
 	6950 2250 7475 2250
 Wire Wire Line
 	3875 2750 4350 2750
+$Comp
+L Device:D_Schottky D3
+U 1 1 5B7BADA6
+P 1700 4575
+F 0 "D3" H 1700 4359 50  0000 C CNN
+F 1 "D_Schottky" H 1700 4450 50  0000 C CNN
+F 2 "" H 1700 4575 50  0001 C CNN
+F 3 "~" H 1700 4575 50  0001 C CNN
+	1    1700 4575
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D4
+U 1 1 5B7BB028
+P 1675 5900
+F 0 "D4" H 1675 5684 50  0000 C CNN
+F 1 "D_Schottky" H 1675 5775 50  0000 C CNN
+F 2 "" H 1675 5900 50  0001 C CNN
+F 3 "~" H 1675 5900 50  0001 C CNN
+	1    1675 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 5B7BB3EC
+P 9450 1600
+F 0 "Q1" H 9656 1554 50  0000 L CNN
+F 1 "SQ2361ES" H 9656 1645 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9650 1700 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/427/sq2361es-1018990.pdf" H 9450 1600 50  0001 C CNN
+	1    9450 1600
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D2
+U 1 1 5B7BE1FC
+P 10350 2100
+F 0 "D2" H 10350 2000 50  0000 C CNN
+F 1 "D_Schottky" H 10350 2225 50  0000 C CNN
+F 2 "" H 10350 2100 50  0001 C CNN
+F 3 "~" H 10350 2100 50  0001 C CNN
+	1    10350 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 5B7BE360
+P 9850 1900
+F 0 "D1" H 9750 1850 50  0000 C CNN
+F 1 "D_Schottky" H 9850 1975 50  0000 C CNN
+F 2 "" H 9850 1900 50  0001 C CNN
+F 3 "~" H 9850 1900 50  0001 C CNN
+	1    9850 1900
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
